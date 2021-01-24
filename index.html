@@ -8,12 +8,25 @@
             h4 {
                 font-family:Verdana, Geneva, Tahoma, sans-serif;
             }
+
+            fieldset {
+                border:2px dashed rgb(179, 0, 0);
+            }
+
+            input:valid {
+                border-color:green;
+            }
+
+            input:invalid {
+                border-color:red;
+            }
         </style>
     </head>
 <body>
 <div style="text-align: center; font-size: medium;">
 <h4 style="font-size: 50px;">Sign Up</h4>
 <form action="search.html" autocomplete="on">
+
 <span style="font-size: medium;">Your Full Name:</span> <input type="text" value="">
 <br><br><span style="font-size: medium;">Your Birth Date:</span> <input type="date" value="">
 <br><br><span style="font-size: medium;">Your Age:</span> <input type="number" value="">
@@ -27,11 +40,12 @@
     <option value="">Other</option>
 </select>
 <br><br><span style="font-size: medium;">Country (If Other) </span><input type="text">
+
 <br><br><span style="font-size: medium;">Would You Like to recieve Emails and Updates?</span><input type="checkbox" value="">
-<br><br><span style="font-size:medium;">Email (If you checked the box) : </span><input type="email">
-<br><br><span style="font-size: medium;">Create Username: </span><input type="text">
-<br><br><span style="font-size: medium;">Create Password: </span><input type="password">
-<br><br><span style="font-size:medium ;">Confirm Password: </span><input type="password">
+<br><br><span style="font-size:medium;">Email (If you checked the box) : </span><input type="email" tabindex="">
+<br><br><span style="font-size: medium;">Create Username: </span><input type="text" tabindex="" required>
+<br><br><span style="font-size: medium;">Create Password: </span><input type="password" required minlength="8">
+<br><br><span style="font-size:medium ;">Confirm Password: </span><input type="password" required>
 <br><br><span style="font-size: medium;">Profile Picture: </span><input type="file">
 <br><br><input type="submit">
 </form>
